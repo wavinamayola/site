@@ -17,7 +17,7 @@ export default function Footer() {
 
   return (
     <footer className="mb-16">
-      <ul className="font-sm mt-8 flex flex-col justify-center text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
+      <ul className="font-sm mt-8 flex flex-row justify-center text-neutral-600 md:space-x-4 sm:space-x-2 dark:text-neutral-300">
         <li className="">
           <a
             rel="noopener noreferrer"

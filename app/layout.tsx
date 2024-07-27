@@ -25,7 +25,7 @@ export default function RootLayout({
       lang="en"
       className={`${GeistSans.variable} ${GeistMono.variable}`}
     >
-      <body className={`${inter.className} antialiased max-w-3xl mt-8 mx-auto`}>
+      <body className={`${inter.className} antialiased max-w-3xl mt-8 mx-auto sm:px-10`}>
         <NextThemeProvider>
           <Navbar />
           {children}
