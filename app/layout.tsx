@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
-import NextThemeProvider from "@/provider/ThemeProvider";
-
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
 import Navbar from '../components/nav/nav'
 import Footer from '../components/footer/footer'
+import NextThemeProvider from "@/provider/ThemeProvider";
+import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,6 +24,7 @@ export default function RootLayout({
       lang="en"
       className={`${GeistSans.variable} ${GeistMono.variable}`}
     >
+      <link rel="icon" href="/wave.svg" />
       <body className={`${inter.className} antialiased max-w-3xl mt-8 mx-auto sm:px-10`}>
         <NextThemeProvider>
           <Navbar />

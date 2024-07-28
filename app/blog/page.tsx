@@ -1,5 +1,5 @@
 export const metadata = {
-    title: 'Blog',
+    title: 'Blog | Wave Mayola',
   }
   
   export default function Page() {

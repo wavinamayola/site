@@ -1,7 +1,7 @@
 import Typewriter from "@/components/typewriter"
 
 export const metadata = {
-  title: 'Wave 🌊',
+  title: 'Wave Mayola',
 }
 
 export default function Page() {
@@ -33,7 +33,7 @@ export default function Page() {
           <br />
           <div className="mt-4 flex flex-col">
             <span className="text-teal-500">{"> Wave.interests"}</span>
-            <span className="flex-1 typing items-center pl-2">["coding","running","workout","freediving","photography","videography"]</span>
+            <span className="flex-1 typing items-center pl-2">["coding", "running", "workout", "freediving", "photography", "videography"]</span>
           </div>
           <br />
           <div className="mt-4 flex flex-col">
@@ -43,7 +43,7 @@ export default function Page() {
           <br />
           <div className="mt-4 flex flex-col">
             <span className="text-teal-500">{"> Wave.skills"}</span>
-            <span className="flex-1 typing items-center pl-2">["Golang","Kubernetes","PHP","Laravel","ReactJS","NextJS","MySQL","PostgreSQL","Git"]</span>
+            <span className="flex-1 typing items-center pl-2">["Golang", "Kubernetes", "Grafana", "PHP", "Laravel", "ReactJS", "NextJS", "MySQL", "PostgreSQL", "InfluxDB", "Git", "Scraping"]</span>
           </div>
           <br />
         </div>

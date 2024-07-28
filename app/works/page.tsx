@@ -1,7 +1,7 @@
 import Typewriter from "@/components/typewriter"
 
 export const metadata = {
-  title: 'Works',
+  title: 'Works | Wave Mayola',
 }
 
 export default function Page() {
