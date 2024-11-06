@@ -28,7 +28,7 @@ export default function Page() {
           <br />
           <div className="mt-4 flex flex-col">
             <span className="text-teal-500">{"> Wave.resume"}</span>
-            <span className="flex-1 typing items-center pl-2 text-yellow-100">"<a rel="noopener" href="/wave_resume.pdf" target="_blank">wave.pdf</a>"</span>
+          <span className="flex-1 typing items-center pl-2 text-yellow-100">"<a rel="noopener" href="/wave_resumeUpdated.pdf" target="_blank">wave.pdf</a>"</span>
           </div>
           <br />
           <div className="mt-4 flex flex-col">
