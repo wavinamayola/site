@@ -1,62 +1,19 @@
 'use client'
 
-import EmailIcon from "@/svg/EmaiIIcon"
-import GithubIcon from "@/svg/GithubIcon"
-import InstagramIcon from "@/svg/InstagramIcon"
-import LinkedInIcon from "@/svg/LinkedIn"
-import { useTheme } from "next-themes"
-import { useEffect, useState } from "react"
+import React from 'react'
+import { Icon, SocialLink, ICONS, SOCIALS } from '../portfolio/primitives'
 
 export default function Footer() {
-  const { theme } = useTheme()
-  const [fontColor, setFontColor] = useState('#1f2937')
-
-  useEffect(() => {
-    setFontColor(theme === 'dark' ? 'white' : '#1f2937')
-   }, [theme])
-
   return (
-    <footer className="mb-16">
-      <ul className="font-sm mt-8 flex flex-row justify-center text-neutral-600 md:space-x-4 sm:space-x-2 dark:text-neutral-300">
-        <li className="">
-          <a
-            rel="noopener noreferrer"
-            href="mailto:waybemayols@gmail.com"
-          >
-            <EmailIcon color={fontColor} />
-          </a>
-        </li>
-        <li className="pl-20">
-          <a
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://github.com/wavinamayola"
-          >
-            <GithubIcon color={fontColor} />
-          </a>
-        </li>
-        <li className="pl-20">
-          <a
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://www.linkedin.com/in/wavina-mayola/"
-          >
-            <LinkedInIcon color={fontColor} />
-          </a>
-        </li>
-        <li className="pl-20">
-          <a
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://www.instagram.com/__rndm.jpg/"
-          >
-            <InstagramIcon color={fontColor} />
-          </a>
-        </li>
-      </ul>
-      <p className="mt-12 text-sm text-neutral-400 dark:text-neutral-300 text-center">
-        © Wavina Mayola {new Date().getFullYear()}
-      </p>
+    <footer style={{ borderTop: '1px solid var(--border)', padding: 'var(--space-6) var(--page-gutter)' }}>
+      <div style={{ maxWidth: 'var(--container)', margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem' }}>
+        <span style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-xs)', color: 'var(--text-faint)' }}>© Wavina Mayola {new Date().getFullYear()}</span>
+        <div style={{ display: 'flex', gap: '0.3rem' }}>
+          {SOCIALS.map((s) => (
+            <SocialLink key={s.key} href={s.href} label={s.label} size={34}><Icon src={ICONS[s.key]} /></SocialLink>
+          ))}
+        </div>
+      </div>
     </footer>
   )
 }
