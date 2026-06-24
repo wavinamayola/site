@@ -33,7 +33,8 @@ export default function Hero() {
   }, [text, del, idx])
 
   return (
-    <section id="home" style={{ padding: 'var(--space-9) var(--page-gutter) var(--space-8)', maxWidth: 'var(--container)', margin: '0 auto' }}>
+    <section id="home" style={{ padding: 'var(--space-9) var(--page-gutter) var(--space-8)' }}>
+      <div style={{ maxWidth: 'var(--container)', margin: '0 auto' }}>
       <div style={{ marginBottom: 'var(--space-5)' }}><Eyebrow>Full-stack software engineer · Cebu, Philippines</Eyebrow></div>
       <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', marginBottom: 'var(--space-4)', padding: '0.3rem 0.7rem', borderRadius: 'var(--radius-full)', background: 'var(--matcha-soft)', border: '1px solid color-mix(in srgb, var(--matcha) 30%, transparent)' }}>
         <span style={{ width: 8, height: 8, borderRadius: '50%', background: 'var(--matcha-bright)', animation: 'wm-whisk-pulse 1.6s var(--ease-soft) infinite' }} />
@@ -43,10 +44,10 @@ export default function Hero() {
         {text || ' '}<span style={{ color: 'var(--accent)' }}>.</span>
         <span style={{ display: 'inline-block', width: '0.5ch', marginLeft: '0.05ch', background: 'var(--accent-bright)', animation: 'blink 1.1s steps(1) infinite' }}>&nbsp;</span>
       </h1>
-      <p style={{ margin: 'var(--space-5) 0 0', maxWidth: '58ch', fontSize: 'var(--text-lg)', lineHeight: 'var(--leading-normal)', color: 'var(--text-body)', textAlign: 'justify' }}>
+      <p style={{ margin: 'var(--space-5) 0 0', fontSize: 'var(--text-lg)', lineHeight: 'var(--leading-normal)', color: 'var(--text-body)', textAlign: 'justify' }}>
         For more than <strong style={{ color: 'var(--text-strong)', fontWeight: 'var(--weight-medium)' as unknown as number }}>7 years</strong>, I&apos;ve partnered with startups and enterprise teams to design, build, and scale full-stack systems — though my real specialty is the <strong style={{ color: 'var(--text-strong)', fontWeight: 'var(--weight-medium)' as unknown as number }}>backend</strong>, primarily in <strong style={{ color: 'var(--text-strong)', fontWeight: 'var(--weight-medium)' as unknown as number }}>Golang and PHP</strong>. I&apos;ve worked on products ranging from email-as-a-service platforms and banking integrations across Southeast Asia to healthcare and e-learning systems serving real users every day.
       </p>
-      <p style={{ margin: 'var(--space-4) 0 0', maxWidth: '58ch', fontSize: 'var(--text-lg)', lineHeight: 'var(--leading-normal)', color: 'var(--text-body)', textAlign: 'justify' }}>
+      <p style={{ margin: 'var(--space-4) 0 0', fontSize: 'var(--text-lg)', lineHeight: 'var(--leading-normal)', color: 'var(--text-body)', textAlign: 'justify' }}>
         I&apos;m happiest deep in the backend — creating reliable, high-performance services with clean, maintainable architectures. Whether I&apos;m troubleshooting critical production issues, managing cloud deployments with <strong style={{ color: 'var(--text-strong)', fontWeight: 'var(--weight-medium)' as unknown as number }}>Kubernetes and AWS</strong>, or designing extensible APIs, I aim to build software that scales and lasts. When a project needs it, I&apos;ll take it all the way to the frontend too.
       </p>
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', margin: 'var(--space-6) 0 var(--space-7)' }}>
@@ -73,6 +74,7 @@ export default function Hero() {
           </div>
         </div>
       </Reveal>
+      </div>
     </section>
   )
 }

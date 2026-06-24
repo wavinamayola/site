@@ -64,7 +64,8 @@ export default function Navbar() {
 
   return (
     <header style={{ position: 'sticky', top: 0, zIndex: 20, backdropFilter: 'blur(10px)', WebkitBackdropFilter: 'blur(10px)', background: 'color-mix(in srgb, var(--bg) 78%, transparent)', borderBottom: '1px solid var(--border)' }}>
-      <div style={{ maxWidth: 'var(--container)', margin: '0 auto', padding: '0.85rem var(--page-gutter)', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+      <div style={{ padding: '0.85rem var(--page-gutter)' }}>
+      <div style={{ maxWidth: 'var(--container)', margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         <a href="#home" onClick={(e) => onNav(e, 'home')} style={{ display: 'flex', alignItems: 'center', gap: '0.55rem', textDecoration: 'none' }}>
           <span style={{ position: 'relative', display: 'inline-flex', alignItems: 'center', gap: '0.55rem' }}>
             <span style={{ width: 30, height: 30, display: 'inline-flex', color: 'var(--text-strong)', animation: waving ? 'wm-wave-surge 1.5s cubic-bezier(0.45, 0, 0.2, 1) both' : 'none' }}><Icon src="/wave-logo.svg" /></span>
@@ -105,6 +106,7 @@ export default function Navbar() {
             </button>
           )}
         </nav>
+      </div>
       </div>
       {isMobile && (
         <div style={{ overflow: 'hidden', maxHeight: menuOpen ? 320 : 0, transition: 'max-height var(--dur-slow) var(--ease-soft)', borderTop: menuOpen ? '1px solid var(--border)' : '1px solid transparent' }}>

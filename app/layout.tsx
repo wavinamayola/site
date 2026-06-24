@@ -3,7 +3,7 @@ import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
 import Navbar from '../components/nav/nav'
 import Footer from '../components/footer/footer'
-import LoaderOverlay from '../components/portfolio/loader-overlay'
+import LoaderProvider from '../components/portfolio/loader-overlay'
 import NextThemeProvider from "@/provider/ThemeProvider";
 import "./globals.css";
 
@@ -26,10 +26,11 @@ export default function RootLayout({
       <link rel="icon" href="/wave-logo.svg" />
       <body className="antialiased">
         <NextThemeProvider>
-          <LoaderOverlay />
-          <Navbar />
-          <main>{children}</main>
-          <Footer />
+          <LoaderProvider>
+            <Navbar />
+            <main>{children}</main>
+            <Footer />
+          </LoaderProvider>
         </NextThemeProvider>
       </body>
     </html>
